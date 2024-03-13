@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-texto: #fff;
+}
+
+body {
+  /*
+    background-image: url(assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+  /*backgrounded color image repeat position/size*/
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  /*acima e uma forma de encurtar as propriedades para a opcao backgrounded, tem mais opcoes...*/
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: var(--cor-texto);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* #profile img {
+  display: block;
+  margin: auto; nao funciona para elementos do tipo inline, entao poderia fazer conforme abaixo simplesmente alterar o pai que é do tipo block setando o alinhamento dos filhos dele para center
+} */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin: 8px;
+}
+
+/* links */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: rgba(255, 2555, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 1s;
+}
+
+ul li a:hover {
+  background: rgba(255, 2555, 255, 0.05);
+  border: 1.5px solid var(--cor-texto);
+}
