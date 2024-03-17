@@ -1,10 +1,12 @@
-let btnPerfil = document.querySelector("#switch button")
+function toggleMode() {
+  const html = document.documentElement
+  html.classList.toggle("light")
 
-btnPerfil.onclick = () => {
-  let perfil = document.documentElement.getAttribute("class")
+  let img = document.querySelector("#profile img")
 
-  document.documentElement.setAttribute(
-    "class",
-    perfil == "light" ? null : "light"
-  )
+  if (html.classList.contains("light")) {
+    img.setAttribute("src", "./assets/avatar-light.png")
+  } else {
+    img.setAttribute("src", "./assets/avatar.png")
+  }
 }
