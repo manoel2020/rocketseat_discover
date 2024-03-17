@@ -26,20 +26,21 @@
 
 body {
   background: var(--bg-url);
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  color: var(--text-color);
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
+body * {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
   color: var(--text-color);
 }
 
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto 0px;
   padding: 0 24px;
 }
 
@@ -171,11 +172,11 @@ footer {
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-desktop.jpg) no-repeat top center/cover;
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light.jpg) no-repeat top center/cover;
   }
 }
 
